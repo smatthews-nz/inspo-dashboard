@@ -1,0 +1,54 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(12, 1fr); 
+  text-align: center;
+  background-image: url(./city1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vmax;
+  width: 100vmax;
+}
+
+.quote-container {
+  background-color: rgba(143,185,168, 0.6);
+  grid-column: 1 / 13;
+  grid-row: span 1;
+  border: 0.1rem rgba(143,185,168, 0.6) solid;
+  border-bottom-right-radius: 50px;
+  font-family: 'Rubik';
+  font-weight: 300;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+}
+
+.weather-container {
+  background-color: rgba(247,241,227, 0.7);
+  border: 0.1rem rgba(247,241,227, 0.7) solid;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  grid-row: 3 / span 3;
+  grid-column: 1/ span 3;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-container img {
+  width: 33%;
+}
+
+.todos-container {
+  background-color: rgba(247,241,227, 0.7);
+  border: 0.1rem rgba(247,241,227, 0.7) solid;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  grid-column: 6 / 15;
+  grid-row: 3 / span 3;
+}
