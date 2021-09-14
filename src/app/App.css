@@ -4,10 +4,10 @@
   grid-template-rows: repeat(12, 1fr); 
   text-align: center;
   background-image: url(./city1.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vmax;
-  width: 100vmax;
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .quote-container {
@@ -24,6 +24,7 @@
   align-items: center;
   flex-direction: row;
   color: white;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
 }
 
 .weather-container {
@@ -38,17 +39,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
 }
 
 .weather-container img {
   width: 33%;
 }
 
-.todos-container {
+.todos-input-container {
   background-color: rgba(247,241,227, 0.7);
   border: 0.1rem rgba(247,241,227, 0.7) solid;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   grid-column: 6 / 15;
   grid-row: 3 / span 3;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
