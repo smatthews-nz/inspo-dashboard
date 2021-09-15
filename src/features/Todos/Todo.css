@@ -4,11 +4,28 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
-    width: 25%;
+    width: 30%;
     height: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
+}
+
+.deleted {
+    display: none;
+}
+
+.done {
+    background-color: rgba(247,241,227, 0.6)
+}
+
+.done h4 {
+    text-decoration: line-through;
+}
+
+.todo-card h4 {
+    font-weight: 400;
 }
 
 .todo-card:hover {
