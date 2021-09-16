@@ -46,7 +46,7 @@ export const Weather = () => {
             <div className="weather-container">
                 <h2>What's the weather <br/> like today?</h2>
                 <div className="forecast">
-                <img src={`${iconUrl}${weather.weather.icon}@2x.png`} alt="raincloud"/>
+                <img src={`${iconUrl}${weather.weather.icon}@2x.png`} alt="weather icon"/>
                 <h2>{weather.weather.max}°C Hi / {weather.weather.min}°C Lo</h2>
                 <h3>{weather.weather.description}</h3>
                 </div>
