@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchQuote = createAsyncThunk('quote/fetchQuote', async () => {
     const response = await fetch(`https://api.quotable.io/random`)
