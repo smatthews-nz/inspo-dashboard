@@ -6,8 +6,8 @@
   background-image: url(./city1.jpg);
   background-size: cover;
   background-repeat: repeat;
-  height: 100%;
-  width: 100%;
+  height: 100vw;
+  width: 100vh;
 }
 
 .quote-container {
