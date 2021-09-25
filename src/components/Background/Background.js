@@ -1,40 +1,33 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchImage } from '../../features/BackgroundImage/backgroundImageSlice';
 import { selectImage } from '../../features/BackgroundImage/backgroundImageSlice';
 
 export const Background = () => {
-    const dispatch = useDispatch();
-
-  const getImage = async () => {
-    let fetchedImage = await dispatch(fetchImage())
-    return fetchedImage;
-  }
-
-  getImage();
   const image = useSelector(selectImage);
-  console.log(image);
-
-  const handleClick = (e) => { 
-    if(e.target.classList.contains('App')){
-      console.log('clicked!')
-      dispatch(fetchImage())
-    }
+  const dispatch = useDispatch();
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  const getImage = async () => {
+   await dispatch(fetchImage())
+    setIsLoaded(true)
   }
 
   useEffect(() => {
-    console.log(image);
+    getImage()
+  }, [isLoaded])
+
+
+  if(isLoaded === false){
     return(
-        <div className="background" onClick={handleClick} style={{backgroundImage: `url(${image.urls.full})`}}>
-        </div>
-    
-      )
-
-  }, [image])
-  
-  return(
-    <div className="background" onClick={handleClick}>
-    </div>
-
-  )
+      <div className="background">
+      </div>
+    )
+  } else {
+    return(
+      <div className="background">
+        {isLoaded && <img src={image.image.urls.raw} alt="Background" id="background-img"/>}
+      </div>
+    )
+  }
 }

@@ -1,19 +1,29 @@
-.App {
+.background-container{
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(12, 1fr); 
   text-align: center;
-  background-image: url(./city1.jpg);
-  background-size: cover;
-  background-repeat: repeat;
-  height: 100vw;
-  width: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  grid-column: 1 / 15;
+  grid-row: 1 / 13;
+  z-index: -1;
+}
+
+#background-img {
+  height: 100vh;
+  width: 100%;
 }
 
 .quote-container {
   background-color: rgba(143,185,168, 0.6);
   grid-column: 1 / 13;
-  grid-row: span 1;
+  grid-row: 1 / 2;
   border: 0.1rem rgba(143,185,168, 0.6) solid;
   border-bottom-right-radius: 50px;
   font-family: 'Rubik';
@@ -25,6 +35,8 @@
   flex-direction: row;
   color: white;
   box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  position: relative;
+  z-index: 100;
 }
 
 .weather-container {
